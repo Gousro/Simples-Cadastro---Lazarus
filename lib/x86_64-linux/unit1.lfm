@@ -1,0 +1,510 @@
+object FrmPrincipal: TFrmPrincipal
+  Left = 470
+  Height = 482
+  Top = 172
+  Width = 568
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Cadastro Simples'
+  ClientHeight = 482
+  ClientWidth = 568
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '2.0.12.0'
+  object GroupBox1: TGroupBox
+    Left = 0
+    Height = 482
+    Top = 0
+    Width = 568
+    Align = alClient
+    ClientHeight = 480
+    ClientWidth = 566
+    TabOrder = 0
+    object Panel1: TPanel
+      Left = 0
+      Height = 480
+      Top = 0
+      Width = 566
+      Align = alClient
+      ClientHeight = 480
+      ClientWidth = 566
+      TabOrder = 0
+      object PageControl1: TPageControl
+        Cursor = crHandPoint
+        Left = 1
+        Height = 478
+        Top = 1
+        Width = 564
+        ActivePage = TabSheet1
+        Align = alClient
+        TabIndex = 0
+        TabOrder = 0
+        OnChange = PageControl1Change
+        object TabSheet1: TTabSheet
+          Caption = 'Cadastrar'
+          ClientHeight = 447
+          ClientWidth = 554
+          object GroupBox2: TGroupBox
+            Left = 9
+            Height = 169
+            Top = 8
+            Width = 535
+            Caption = 'Dados Básicos'
+            ClientHeight = 151
+            ClientWidth = 533
+            TabOrder = 0
+            object LName: TLabel
+              Left = 16
+              Height = 15
+              Top = 8
+              Width = 41
+              Caption = 'Nome'
+              ParentColor = False
+            end
+            object LEmail: TLabel
+              Left = 16
+              Height = 15
+              Top = 64
+              Width = 41
+              Caption = 'E-mail'
+              ParentColor = False
+            end
+            object LTelefone: TLabel
+              Left = 16
+              Height = 15
+              Top = 120
+              Width = 58
+              Caption = 'Telefone'
+              ParentColor = False
+            end
+            object Nome: TEdit
+              Left = 88
+              Height = 33
+              Top = 0
+              Width = 248
+              TabOrder = 0
+              TextHint = 'Nome Completo'
+            end
+            object Email: TEdit
+              Left = 88
+              Height = 33
+              Top = 56
+              Width = 248
+              TabOrder = 1
+              TextHint = 'Digite seu e-mail'
+            end
+            object Telefone: TMaskEdit
+              Left = 88
+              Height = 33
+              Top = 112
+              Width = 248
+              CharCase = ecNormal
+              MaxLength = 16
+              TabOrder = 3
+              EditMask = '(##) ###-###-###;1;_'
+              Text = '(  )    -   -   '
+              SpaceChar = '_'
+            end
+            object RadioGroup1: TRadioGroup
+              Left = 342
+              Height = 145
+              Top = 0
+              Width = 185
+              AutoFill = True
+              Caption = 'Gênero'
+              ChildSizing.LeftRightSpacing = 6
+              ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+              ChildSizing.EnlargeVertical = crsHomogenousChildResize
+              ChildSizing.ShrinkHorizontal = crsScaleChilds
+              ChildSizing.ShrinkVertical = crsScaleChilds
+              ChildSizing.Layout = cclLeftToRightThenTopToBottom
+              ChildSizing.ControlsPerLine = 1
+              ClientHeight = 127
+              ClientWidth = 183
+              TabOrder = 2
+              object RadioButton1: TRadioButton
+                Cursor = crHandPoint
+                Left = 6
+                Height = 43
+                Top = 0
+                Width = 171
+                Caption = 'Masculino'
+                Checked = True
+                TabOrder = 0
+                TabStop = True
+              end
+              object RadioButton2: TRadioButton
+                Cursor = crHandPoint
+                Left = 6
+                Height = 43
+                Top = 43
+                Width = 171
+                Caption = 'Femenino'
+                TabOrder = 1
+              end
+              object RadioButton3: TRadioButton
+                Cursor = crHandPoint
+                Left = 6
+                Height = 41
+                Top = 86
+                Width = 171
+                Caption = 'Outro'
+                TabOrder = 2
+              end
+            end
+          end
+          object GroupBox3: TGroupBox
+            Left = 8
+            Height = 184
+            Top = 177
+            Width = 536
+            Caption = 'Endereço'
+            ClientHeight = 166
+            ClientWidth = 534
+            TabOrder = 1
+            object LCep: TLabel
+              Left = 17
+              Height = 15
+              Top = 10
+              Width = 26
+              Caption = 'Cep'
+              ParentColor = False
+            end
+            object LEstado: TLabel
+              Left = 232
+              Height = 15
+              Top = 10
+              Width = 47
+              Caption = 'Estado'
+              ParentColor = False
+            end
+            object LEndereco: TLabel
+              Left = 16
+              Height = 15
+              Top = 64
+              Width = 63
+              Caption = 'Endereço'
+              ParentColor = False
+            end
+            object LNumero: TLabel
+              Left = 440
+              Height = 15
+              Top = 64
+              Width = 18
+              Caption = 'Nº'
+              ParentColor = False
+            end
+            object LCidade: TLabel
+              Left = 17
+              Height = 15
+              Top = 120
+              Width = 47
+              Caption = 'Cidade'
+              ParentColor = False
+            end
+            object LBairro: TLabel
+              Left = 256
+              Height = 15
+              Top = 120
+              Width = 42
+              Caption = 'Bairro'
+              ParentColor = False
+            end
+            object Estado: TEdit
+              Left = 312
+              Height = 33
+              Top = 0
+              Width = 216
+              TabOrder = 1
+              TextHint = 'Espírito Santo'
+            end
+            object Endereco: TEdit
+              Left = 89
+              Height = 33
+              Top = 56
+              Width = 320
+              TabOrder = 0
+              TextHint = 'Rua Um'
+            end
+            object Numero: TEdit
+              Left = 480
+              Height = 33
+              Top = 56
+              Width = 48
+              TabOrder = 4
+              TextHint = '14'
+            end
+            object Cidade: TEdit
+              Left = 89
+              Height = 33
+              Top = 112
+              Width = 143
+              TabOrder = 2
+              TextHint = 'Vila Velha'
+            end
+            object Bairro: TEdit
+              Left = 328
+              Height = 33
+              Top = 112
+              Width = 200
+              TabOrder = 3
+              TextHint = 'Cocal'
+            end
+            object Cep: TMaskEdit
+              Left = 88
+              Height = 33
+              Top = 0
+              Width = 119
+              CharCase = ecNormal
+              MaxLength = 10
+              TabOrder = 5
+              EditMask = '##.###-###;1;_'
+              Text = '  .   -   '
+              SpaceChar = '_'
+            end
+          end
+          object Salvar: TButton
+            Cursor = crHandPoint
+            Left = 8
+            Height = 48
+            Top = 384
+            Width = 75
+            Caption = 'Salvar'
+            OnClick = SalvarClick
+            TabOrder = 2
+          end
+          object Fechar: TButton
+            Cursor = crHandPoint
+            Left = 469
+            Height = 48
+            Top = 384
+            Width = 75
+            Caption = 'Fechar'
+            OnClick = FecharClick
+            TabOrder = 3
+          end
+        end
+        object TabSheet2: TTabSheet
+          Caption = 'Cadastrado'
+          ClientHeight = 447
+          ClientWidth = 554
+          object GroupBox4: TGroupBox
+            Left = 9
+            Height = 169
+            Top = 8
+            Width = 535
+            Caption = 'Dados Básicos'
+            ClientHeight = 151
+            ClientWidth = 533
+            TabOrder = 0
+            object LName1: TLabel
+              Left = 16
+              Height = 15
+              Top = 8
+              Width = 41
+              Caption = 'Nome'
+              ParentColor = False
+            end
+            object LEmail1: TLabel
+              Left = 16
+              Height = 15
+              Top = 64
+              Width = 41
+              Caption = 'E-mail'
+              ParentColor = False
+            end
+            object LTelefone1: TLabel
+              Left = 16
+              Height = 15
+              Top = 120
+              Width = 58
+              Caption = 'Telefone'
+              ParentColor = False
+            end
+            object Nome1: TEdit
+              Left = 88
+              Height = 33
+              Top = 0
+              Width = 248
+              Enabled = False
+              TabOrder = 0
+            end
+            object Email1: TEdit
+              Left = 88
+              Height = 33
+              Top = 56
+              Width = 248
+              Enabled = False
+              TabOrder = 1
+            end
+            object Telefone1: TEdit
+              Left = 88
+              Height = 33
+              Top = 112
+              Width = 248
+              Enabled = False
+              TabOrder = 2
+            end
+            object RadioGroup2: TRadioGroup
+              Left = 342
+              Height = 144
+              Top = 0
+              Width = 185
+              AutoFill = True
+              Caption = 'Gênero'
+              ChildSizing.LeftRightSpacing = 6
+              ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+              ChildSizing.EnlargeVertical = crsHomogenousChildResize
+              ChildSizing.ShrinkHorizontal = crsScaleChilds
+              ChildSizing.ShrinkVertical = crsScaleChilds
+              ChildSizing.Layout = cclLeftToRightThenTopToBottom
+              ChildSizing.ControlsPerLine = 1
+              ClientHeight = 126
+              ClientWidth = 183
+              TabOrder = 3
+              object GeneroField: TEdit
+                Left = 6
+                Height = 126
+                Top = 0
+                Width = 171
+                Alignment = taCenter
+                Enabled = False
+                TabOrder = 0
+              end
+            end
+          end
+          object GroupBox5: TGroupBox
+            Left = 8
+            Height = 184
+            Top = 177
+            Width = 536
+            Caption = 'Endereço'
+            ClientHeight = 166
+            ClientWidth = 534
+            TabOrder = 1
+            object LCep1: TLabel
+              Left = 17
+              Height = 15
+              Top = 10
+              Width = 26
+              Caption = 'Cep'
+              ParentColor = False
+            end
+            object LEstado1: TLabel
+              Left = 232
+              Height = 15
+              Top = 10
+              Width = 47
+              Caption = 'Estado'
+              ParentColor = False
+            end
+            object LEndereco1: TLabel
+              Left = 16
+              Height = 15
+              Top = 64
+              Width = 63
+              Caption = 'Endereço'
+              ParentColor = False
+            end
+            object LNumero1: TLabel
+              Left = 440
+              Height = 15
+              Top = 64
+              Width = 18
+              Caption = 'Nº'
+              ParentColor = False
+            end
+            object LCidade1: TLabel
+              Left = 17
+              Height = 15
+              Top = 120
+              Width = 47
+              Caption = 'Cidade'
+              ParentColor = False
+            end
+            object LBairro1: TLabel
+              Left = 256
+              Height = 15
+              Top = 120
+              Width = 42
+              Caption = 'Bairro'
+              ParentColor = False
+            end
+            object Cep1: TEdit
+              Left = 89
+              Height = 33
+              Top = 0
+              Width = 119
+              Enabled = False
+              TabOrder = 0
+            end
+            object Estado1: TEdit
+              Left = 312
+              Height = 33
+              Top = 0
+              Width = 216
+              Enabled = False
+              TabOrder = 2
+            end
+            object Endereco1: TEdit
+              Left = 89
+              Height = 33
+              Top = 56
+              Width = 320
+              Enabled = False
+              TabOrder = 1
+            end
+            object Numero1: TEdit
+              Left = 480
+              Height = 33
+              Top = 56
+              Width = 48
+              Enabled = False
+              TabOrder = 5
+            end
+            object Cidade1: TEdit
+              Left = 89
+              Height = 33
+              Top = 112
+              Width = 143
+              Enabled = False
+              TabOrder = 3
+            end
+            object Bairro1: TEdit
+              Left = 328
+              Height = 33
+              Top = 112
+              Width = 200
+              Enabled = False
+              TabOrder = 4
+            end
+          end
+          object Fechar1: TButton
+            Cursor = crHandPoint
+            Left = 469
+            Height = 48
+            Top = 384
+            Width = 75
+            Caption = 'Fechar'
+            OnClick = FecharClick
+            TabOrder = 2
+          end
+        end
+        object TabSheet3: TTabSheet
+          Caption = 'Autor'
+          ClientHeight = 447
+          ClientWidth = 554
+          object Label1: TLabel
+            Left = 0
+            Height = 447
+            Top = 0
+            Width = 554
+            Align = alClient
+            Alignment = taCenter
+            Caption = #10#10#10#10#10#10#10#10#10#10#10'Rodrigo de Jesus Ribeiro'#10#10'gousro@outlook.com'#10#10'2021'
+            ParentColor = False
+          end
+        end
+      end
+    end
+  end
+end
